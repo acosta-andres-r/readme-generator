@@ -53,8 +53,8 @@ ${data.contributing}
 
 ### Test
 ${data.test}
-### Questions
 
+### Questions
  For more information, additional questions or comments, contact [${data.user}](https://github.com/${data.github}).
 
 `;
