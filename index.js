@@ -36,7 +36,7 @@ const questions = [
     type: "list",
     name: "license",
     message: "Choose a license for your application",
-    choices:[
+    choices: [
       'MIT',
       'GPLv3',
       'AGPL',
@@ -77,9 +77,14 @@ function init() {
 
 // function call to initialize program
 init()
-.then(function(answers){
-  const markdown = generateMarkdown(answers)
+  .then(function (answers) {
+    const markdown = generateMarkdown(answers)
 
-  console.log(markdown);
-});
+    return writeFileAsync("README.md", markdown)
+  }).then(function () {
+    console.log("Successfully wrote to README.md");
+  })
+  .catch(function (err) {
+    console.log(err);
+  });;
 
