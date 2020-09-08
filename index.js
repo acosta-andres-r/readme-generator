@@ -66,10 +66,6 @@ const questions = [
   }
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
 // function to initialize program
 function init() {
   return inquirer.prompt(questions);
@@ -80,7 +76,8 @@ init()
   .then(function (answers) {
     const markdown = generateMarkdown(answers)
 
-    return writeFileAsync("README.md", markdown)
+    // Write markdown file
+    return writeFileAsync("./markdown/README.md", markdown)
   }).then(function () {
     console.log("Successfully wrote to README.md");
   })

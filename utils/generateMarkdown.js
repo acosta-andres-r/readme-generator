@@ -12,7 +12,7 @@ function generateMarkdown(data) {
   * [Test](#test)
   * [Questions](#questions)`
 
-  // LICENSE:
+  // Object LICENSE:
   const licenses = {
     MIT: '![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)',
     GPLv3: '![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)',
@@ -21,6 +21,7 @@ function generateMarkdown(data) {
     'IPL 1.0': '![IPL 1.0 License](https://img.shields.io/badge/License-IPL%201.0-blue.svg)'
   }
 
+  // Template literal to write README context
   return `<h1 align="center"> ${ data.title } </h1> 
 
 <div align="center"> 
@@ -55,26 +56,9 @@ ${data.contributing}
 ${data.test}
 
 ### Questions
- For more information, additional questions or comments, contact [${data.user}](https://github.com/${data.github}).
+ For more information, additional questions or comments, please contact [${data.user}](https://github.com/${data.github}).
 
 `;
 }
 
 module.exports = generateMarkdown;
-
-
-//testing:
-// const data = {
-//   title: "Project Readme",
-//   description: "Here is an placeholder for description.",
-//   table: true,
-//   installation: "This is a placeholder for description.",
-//   usage: "Placeholder for usage.",
-//   license: "MIT",
-//   user: 'Andres Acosta',
-//   github: 'acosta-andres-r',
-//   contributing: 'By participating in this project, you agree to abide by Contributor Convenant guidelines.',
-//   test: '```node index.js```'
-// }
-
-// console.log(generateMarkdown(data));
