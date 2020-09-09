@@ -34,8 +34,7 @@ npm install
 ### Usage
 
 Demo
-<!-- Deployed app URL? -->
-<!-- - Link to [deployed App](https://acosta-andres-r.github.io/Portfolio/) -->
+![](demo/readme-generator-demo.gif)
 
 
 ### License
