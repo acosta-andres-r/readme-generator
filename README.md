@@ -34,6 +34,7 @@ npm install
 ### Usage
 
 Demo
+
 ![](demo/readme-generator-demo.gif)
 
 
