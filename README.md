@@ -8,7 +8,7 @@
 
 ### Description
 
-Create a command-line application that dynamically generates a professional README markdwon file from a user's input using the Inquirer package.
+Create a command-line application that dynamically generates a professional README markdown file from user's input using the Inquirer package.
 
 
 ### Table of Contents
