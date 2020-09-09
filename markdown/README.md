@@ -1,12 +1,12 @@
-<h1 align="center"> README  </h1> 
+<h1 align="center"> README GENERATOR </h1> 
 
 <div align="center"> 
 
-![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)
+![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)
 </div>
   
 ### Description
-description
+Create a command-line app that generates a README.md from user's input.
 
 ### Table of Contents
 
@@ -19,25 +19,25 @@ description
   * [Questions](#questions)
 
 ### Installation
-installation
+```npm install```
 
 ### Usage
-usage
+Demo video
 
 ### License
 
 Copyright (c) Andres Acosta. All rights reserved.
-Licensed under the [AGPL license](LICENSE.md).
+Licensed under the [MIT license](LICENSE.md).
 
 ### Credits
 
 👤 **Andres Acosta** (author): [GitHub](https://github.com/acosta-andres-r)
 
 ### Contributing
-contributing
+By participating in this project, you agree to abide by Contributor Convenat guidance.
 
 ### Test
-testing
+``` node index.js ```
 
 ### Questions
  For more information, additional questions or comments, please contact [Andres Acosta](https://github.com/acosta-andres-r).
