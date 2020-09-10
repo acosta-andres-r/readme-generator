@@ -66,10 +66,62 @@ const questions = [
   }
 ];
 
-// function to initialize program
-function init() {
-  return inquirer.prompt(questions);
-}
+// Creation of loop with asyn/await for contributors
+// If more contributors 
+const anyContributor = [
+  {
+    type: "confirm",
+    name: "isAnyContrib",
+    message: "Is there any contributor?"
+  }
+]
+// Prompt contributor's info
+const contribPrompt = [{
+  type: "input",
+  name: "name",
+  message: "What is the contributor's name?"
+},
+{
+  type: "input",
+  name: "github",
+  message: "What is the contributor's Github username?"
+},
+{
+  type: "confirm",
+  name: "again",
+  message: "Do you want to input another contributor?"
+}];
+
+//  FUNCTIONS
+
+// Prompt contributor questions to form a loop with async/await
+const getContributors = async (input = []) => {
+  const { again, ...answers } = await inquirer.prompt(contribPrompt);
+  
+  const newContributors = [...input, answers];
+
+  return again ? getContributors(newContributors) : newContributors;
+};
+
+// Function to initialize program
+async function init() {
+  try {
+    responses = await inquirer.prompt(questions);
+
+    const { isAnyContrib } = await inquirer.prompt(anyContributor);
+
+    if (isAnyContrib) {
+      contributors = await getContributors(); // Return: Array with contributors object
+      responses ['contributors'] = contributors;
+    }
+
+    console.log(responses); 
+    return responses;
+  }
+  catch (err) {
+    console.error(err);
+  }
+};
 
 // function call to initialize program
 init()
@@ -83,5 +135,5 @@ init()
   })
   .catch(function (err) {
     console.log(err);
-  });;
+  });
 
