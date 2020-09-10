@@ -8,7 +8,7 @@
 
 ### Description
 
-Create a command-line application that dynamically generates a professional README markdown file from user's input using the Inquirer package.
+Create a command-line application that dynamically generates a professional README markdown file from user input using the Inquirer package.
 
 
 ### Table of Contents
@@ -33,6 +33,8 @@ npm install
 
 ### Usage
 
+To generate a README.md, the root folder needs a subfolder called `markdown`.
+
 To start using this command-line application, you need to enter `node index.js` in the terminal inside the root folder tha contains the mentioned file.
 
 Demo
@@ -41,7 +43,9 @@ Demo
 
 To insert contributors, you will be prompted at the end of the questions if there is anyone you want to mentioned in the Credits section of the generated README.md.
 
+Demo
 
+![](demo/contributors-demo.gif)
 
 ### License
 
