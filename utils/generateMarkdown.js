@@ -21,33 +21,45 @@ function generateMarkdown(data) {
     'IPL 1.0': '![IPL 1.0 License](https://img.shields.io/badge/License-IPL%201.0-blue.svg)'
   }
 
+  // Insert Contributers if any
+  const {contributors} = data;
+
+  let contributorsToInsert = ``;
+
+  if (contributors) {
+    contributorsToInsert =  contributors.map((element) => {
+      return `👤 **${element.name}:** [GitHub](https://github.com/${element.github})`;
+    }).join('\n');
+  }
+
   // Template literal to write README context
-  return `<h1 align="center"> ${ data.title } </h1> 
+  return `<h1 align="center"> ${data.title} </h1> 
 
 <div align="center"> 
 
-${ licenses[data.license] }
+${ licenses[data.license]}
 </div>
   
 ### Description
-${ data.description }
+${ data.description}
 
-${(data.table) ? tableOfContent : ''}
+${(data.table) ? tableOfContent : ``}
 
 ### Installation
-${ data.installation }
+${ data.installation}
 
 ### Usage
-${ data.usage }
+${ data.usage}
 
 ### License
 
 Copyright (c) ${data.user}. All rights reserved.
-Licensed under the [${ data.license } license](LICENSE.md).
+Licensed under the [${ data.license} license](LICENSE.md).
 
 ### Credits
 
 👤 **${data.user}** (author): [GitHub](https://github.com/${data.github})
+${contributorsToInsert}
 
 ### Contributing
 ${data.contributing}
