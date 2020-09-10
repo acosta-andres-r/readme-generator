@@ -33,9 +33,14 @@ npm install
 
 ### Usage
 
+To start using this command-line application, you need to enter `node index.js` in the terminal inside the root folder tha contains the mentioned file.
+
 Demo
 
 ![](demo/readme-generator-demo.gif)
+
+To insert contributors, you will be prompted at the end of the questions if there is anyone you want to mentioned in the Credits section of the generated README.md.
+
 
 
 ### License
