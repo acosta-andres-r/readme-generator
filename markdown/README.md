@@ -19,7 +19,7 @@ Create a command-line app that generates a README.md from user input.
   * [Questions](#questions)
 
 ### Installation
-npm install
+```npm install```
 
 ### Usage
 Demo video
@@ -32,14 +32,14 @@ Licensed under the [MIT license](LICENSE.md).
 ### Credits
 
 👤 **Andres Acosta** (author): [GitHub](https://github.com/acosta-andres-r)
-👤 **Mark Ateer:** [GitHub](https://github.com/mark-ateer)
-👤 **Stan Dupp:** [GitHub](https://github.com/stan-dupp)
+👤 **Willie Makit:** [GitHub](https://github.com/w-makit-222)
+👤 **Skye Blue:** [GitHub](https://github.com/skye-blue)
 
 ### Contributing
-By participating in this project, you agree to abide by the Contributor Covenant guidance.
+By participating in this project, you agree to abide by the Contributor Convenat guidance.
 
 ### Test
-node index.js
+```node index.js```
 
 ### Questions
  For more information, additional questions or comments, please contact [Andres Acosta](https://github.com/acosta-andres-r).
